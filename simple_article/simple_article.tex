@@ -1,6 +1,12 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
+\usepackage[
+	backend=biber,
+	style=numeric,
+	sorting=ynt
+]{biblatex}
+\addbibresource{simple_article_bib.bib}
 
 \title{Lorem Ipsum}
 \author{Cicero}
@@ -96,20 +102,7 @@ Suspendisse consectetur pulvinar augue, quis bibendum mi pretium at.
 Maecenas interdum volutpat porttitor. 
 Morbi eu tempus dui. 
 Proin sed luctus libero.
-\subsection{Aliquam Placerat}
-Aliquam placerat, risus sit amet feugiat venenatis, dui elit mollis ante, eget porttitor libero velit ut odio. 
-Nunc sit amet dolor pulvinar, volutpat nunc vitae, interdum urna. 
-Donec tincidunt rhoncus est, sit amet feugiat urna tempus id. 
-Donec et lacinia dolor.
-
-
-Aliquam egestas dapibus tellus at molestie. 
-Aliquam eget molestie justo, non tempus velit. 
-Aenean viverra maximus lacus nec vestibulum. 
-Aliquam mollis ex velit, ut convallis diam tempus a.
-
-
-\begin{table}
+\begin{table}[ht]
     \centering
 	\begin{tabular}{lcc}
 		\toprule
@@ -125,4 +118,59 @@ Aliquam mollis ex velit, ut convallis diam tempus a.
 	\caption{My caption.}
 	\label{tab-label}
 \end{table}
+
+
+Fusce sit amet eleifend nisl, ac varius mi. 
+Fusce rhoncus, eros non congue tincidunt, elit mauris hendrerit metus, eu sagittis diam sapien at nibh. 
+Phasellus magna quam, placerat tincidunt blandit sit amet, sagittis lacinia mauris. 
+Etiam mollis tempus scelerisque. 
+Nunc tempus nulla dignissim, accumsan mi sed, tristique mauris. 
+Integer at magna dui. 
+Cras quis ante tincidunt, mattis ante ut, vulputate lectus. 
+Donec tristique mattis metus sit amet tempor. 
+Maecenas sit amet lectus sit amet mauris scelerisque iaculis. 
+Ut gravida odio et placerat faucibus. 
+Vivamus molestie ante et sem porttitor pretium. 
+Pellentesque placerat dignissim purus, sed sodales neque gravida et.
+
+\subsection{Aliquam Placerat}
+Aliquam placerat, risus sit amet feugiat venenatis, dui elit mollis ante, eget porttitor libero velit ut odio. 
+Nunc sit amet dolor pulvinar, volutpat nunc vitae, interdum urna. 
+Donec tincidunt rhoncus est, sit amet feugiat urna tempus id. 
+Donec et lacinia dolor.
+
+
+Aliquam egestas dapibus tellus at molestie. 
+Aliquam eget molestie justo, non tempus velit. 
+Aenean viverra maximus lacus nec vestibulum. 
+Aliquam mollis ex velit, ut convallis diam tempus a.
+
+\newpage
+
+\section{See Ref}
+Integer luctus rutrum lacus, nec convallis mauris pretium a. 
+Vivamus \cite{knuth-fa} in feugiat justo. 
+Maecenas vel consectetur ante. 
+Nunc a sapien nec massa \cite{knuthwebsite} gravida vehicula vitae a neque. 
+Duis posuere eu erat at tempor. 
+Suspendisse tristique ut odio at elementum. 
+Proin sed commodo neque, non consequat sapien. 
+Aenean scelerisque placerat nisl, a malesuada dui fermentum vitae.
+
+
+Donec malesuada rutrum ante, id gravida magna egestas at. 
+Donec interdum sagittis augue non sollicitudin. 
+Proin eu sem rhoncus, gravida nunc vitae, sodales metus. 
+Etiam quis lacus ut ex \cite{einstein} fermentum porta. 
+Pellentesque sed quam fringilla, ullamcorper elit id, consectetur arcu. 
+Donec dapibus odio turpis, id rutrum ex pellentesque ac. 
+Aliquam eu turpis congue, commodo arcu id, ullamcorper purus. 
+Sed ante \cite{dirac}\cite{einstein} justo, viverra nec finibus quis, pulvinar non nulla. 
+Maecenas varius tempor sapien, eu gravida mauris ornare sit amet. 
+Sed fermentum neque nulla, id luctus lectus hendrerit ut. 
+Phasellus euismod neque non tempus imperdiet. 
+Donec eget ornare odio.
+
+\newpage
+\printbibliography
 \end{document}
