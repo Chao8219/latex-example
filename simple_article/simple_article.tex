@@ -1,16 +1,26 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
-\usepackage[
-	backend=biber,
-	style=numeric,
-	sorting=ynt
-]{biblatex}
-\addbibresource{simple_article_bib.bib}
+\usepackage{amsmath}
+\usepackage[nottoc]{tocbibind} % includes ref in toc
+\usepackage[toc]{glossaries} % includes glossaries in toc
 
 \title{Lorem Ipsum}
 \author{Cicero}
 \date{March 2019}
+
+\newglossaryentry{curly letter X}{
+	name={$\mathcal{X}_{0}$},
+	description={The curly letter $X$, 
+	presenting a set}
+}
+\newglossaryentry{curly letter Y}{
+	name={$\mathcal{Y}_{0}$},
+	description={The curly letter $Y$, 
+	presenting a set}
+}
+\makeglossaries
+\setglossarystyle{altlist} % indent with newline for discription
 
 \begin{document}
 \maketitle
@@ -172,5 +182,8 @@ Phasellus euismod neque non tempus imperdiet.
 Donec eget ornare odio.
 
 \newpage
-\printbibliography
+\bibliographystyle{unsrt}
+\bibliography{simple_article_bib}
+\printglossary[title=Notation, nonumberlist]
+\glsaddall[] % show all gls without mentioning them
 \end{document}
