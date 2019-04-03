@@ -5,13 +5,31 @@
 \usepackage{doc} % includes \BibTeX logo
 \usepackage{metalogo} % includes \XeLaTeX logo
 \usepackage{fontspec} % specify fonts
+\usepackage[toc]{glossaries} % includes glossaries in toc
+
+\renewcommand{\refname}{参考文献 Reference}
+\renewcommand{\contentsname}{目录 Content}
 
 \title{
     中英文混排 Article \\
-    \large with Subtitle
+    \large with English Subtitle
 }
-\author{作者：Chao}
+\author{作者 Author：Chao}
 \date{2019年3月}
+
+% glossaries
+\newglossaryentry{Lao She}{
+	name={老舍},
+    description={舒庆春（1899年2月3日－1966年8月24日），
+    字舍予，笔名老舍}
+}
+\newglossaryentry{Zhang Ruoxu}{
+    name={张若虚},
+    description={张若虚（约660年-约720年），
+    唐代诗人，扬州人}
+}
+\makeglossaries
+\setglossarystyle{altlist} % indent with newline for discription
 
 % set fonts
 \setromanfont[
@@ -26,10 +44,9 @@
 
 \begin{document}
 \maketitle
-\newpage
 \tableofcontents
 \newpage
-\section{唐诗 Poem}
+\section{唐诗 Tang Poetry}
     \subsection{简体中文版 Simplfied Chinese}
         \begin{center}
             春江潮水连海平，海上明月共潮生。\newline
@@ -51,7 +68,7 @@
             斜月沉沉藏海雾，碣石潇湘无限路。\newline
             不知乘月几人归，落月摇情满江树。\newline
         \end{center}
-    \subsection{繁体中文版}
+    \subsection{繁体中文版 Traditional Chinese}
         \begin{center}
             春江潮水連海平，海上明月共潮生。\newline
             灩灩隨波千萬裏，何處春江無月明？\newline
@@ -101,10 +118,11 @@
     \subsection{参考文献 Ref}
     \subsubsection{使用方法 Method of Use}
         If wants to use bib file, one should notice that the package needed is bibtex, not biblatex.
-        For choosing compile engine, there are two recipes:
+        For choosing compile engine, there are three recipes:
         \begin{itemize}
             \item \XeLaTeX × 2
             \item \XeLaTeX $\rightarrow$ \BibTeX $\rightarrow$ \XeLaTeX × 2
+            \item \XeLaTeX $\rightarrow$ makeglossaries $\rightarrow$ \BibTeX $\rightarrow$ \XeLaTeX × 2
         \end{itemize}
         Without changing bib file, one could run \XeLaTeX twice to save time.
     \subsubsection{示例 Example}
@@ -119,5 +137,6 @@
 \newpage
 \bibliographystyle{unsrt}
 \bibliography{simple_CHN_article_bib}
-
+\printglossary[title={词汇表 Notation}, nonumberlist]
+\glsaddall[] % show all gls without mentioning them
 \end{document}
