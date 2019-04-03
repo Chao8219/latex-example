@@ -1,0 +1,123 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xecjk}
+\usepackage[nottoc]{tocbibind} % includes reference in toc
+\usepackage{doc} % includes \BibTeX logo
+\usepackage{metalogo} % includes \XeLaTeX logo
+\usepackage{fontspec} % specify fonts
+
+\title{
+    中英文混排 Article \\
+    \large with Subtitle
+}
+\author{作者：Chao}
+\date{2019年3月}
+
+% set fonts
+\setromanfont[
+    Path=../fonts/,
+    BoldFont=timesbd.ttf,
+    ItalicFont=timesi.ttf,
+    BoldItalicFont=timesbi.ttf
+]{times.ttf}
+\setCJKmainfont[
+    Path=../fonts/
+]{simsun.ttc}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{唐诗 Poem}
+    \subsection{简体中文版 Simplfied Chinese}
+        \begin{center}
+            春江潮水连海平，海上明月共潮生。\newline
+            滟滟随波千万里，何处春江无月明？\newline
+            江流宛转绕芳甸，月照花林皆似霰。\newline
+            空里流霜不觉飞，汀上白沙看不见。\newline
+            江天一色无纤尘，皎皎空中孤月轮。\newline
+            江畔何人初见月，江月何年初照人？\newline
+            人生代代无穷已，江月年年祇相似。\newline
+            不知江月待何人？但见长江送流水。\newline
+            白云一片去悠悠，青枫浦上不胜愁。\newline
+            谁家今夜扁舟子，何处相思明月楼？\newline
+            可怜楼上月徘徊，应照离人妆镜台。\newline
+            玉户帘中卷不去，捣衣砧上拂还来。\newline
+            此时相望不相闻，愿逐月华流照君。\newline
+            鸿雁长飞光不度，鱼龙潜跃水成文。\newline
+            昨夜闲潭梦落花，可怜春半不还家。\newline
+            江水流春去欲尽，江潭落月复西斜。\newline
+            斜月沉沉藏海雾，碣石潇湘无限路。\newline
+            不知乘月几人归，落月摇情满江树。\newline
+        \end{center}
+    \subsection{繁体中文版}
+        \begin{center}
+            春江潮水連海平，海上明月共潮生。\newline
+            灩灩隨波千萬裏，何處春江無月明？\newline
+            江流宛轉繞芳甸，月照花林皆似霰。\newline
+            空裏流霜不覺飛，汀上白沙看不見。\newline
+            江天壹色無纖塵，皎皎空中孤月輪。\newline
+            江畔何人初見月，江月何年初照人？\newline
+            人生代代無窮已，江月年年祇相似。\newline
+            不知江月待何人？但見長江送流水。\newline
+            白雲壹片去悠悠，青楓浦上不勝愁。\newline
+            誰家今夜扁舟子，何處相思明月樓？\newline
+            可憐樓上月徘徊，應照離人妝鏡臺。\newline
+            玉戶簾中卷不去，搗衣砧上拂還來。\newline
+            此時相望不相聞，願逐月華流照君。\newline
+            鴻雁長飛光不度，魚龍潛躍水成文。\newline
+            昨夜閑潭夢落花，可憐春半不還家。\newline
+            江水流春去欲盡，江潭落月復西斜。\newline
+            斜月沈沈藏海霧，碣石瀟湘無限路。\newline
+            不知乘月幾人歸，落月搖情滿江樹。\newline
+        \end{center}
+\newpage
+\section{注释 Note}
+    \subsection{脚注 Footnote}
+    \begin{center}
+        春江潮水连海平，海上明月共潮生。\newline
+        滟滟\footnote{滟滟：波光荡漾的样子。}随波千万里，何处春江无月明？\newline
+        江流宛转绕芳甸\footnote{芳甸: 开满花草的郊野。甸，郊外之地。}，
+        月照花林皆似霰\footnote{霰: 天空中降落的白色不透明的小冰粒。此处形容月光下春花晶莹洁白。}。\newline
+        空里流霜不觉飞，汀上白沙看不见。\newline
+        江天一色无纤尘，皎皎空中孤月轮。\newline
+        江畔何人初见月，江月何年初照人？\newline
+        人生代代无穷已，江月年年祇相似。\newline
+        不知江月待何人？但见长江送流水。\newline
+        白云一片去悠悠，青枫浦上不胜愁。\newline
+        谁家今夜扁舟子，何处相思明月楼？\newline
+        可怜楼上月徘徊，应照离人妆镜台。\newline
+        玉户帘中卷不去，捣衣砧上拂还来。\newline
+        此时相望不相闻，愿逐月华流照君。\newline
+        鸿雁长飞光不度，鱼龙潜跃水成文。\newline
+        昨夜闲潭梦落花，可怜春半不还家。\newline
+        江水流春去欲尽，江潭落月复西斜。\newline
+        斜月沉沉藏海雾，碣石潇湘无限路。\newline
+        不知乘月几人归，落月摇情满江树。\newline
+    \end{center}
+
+    \newpage
+    \subsection{参考文献 Ref}
+    \subsubsection{使用方法 Method of Use}
+        If wants to use bib file, one should notice that the package needed is bibtex, not biblatex.
+        For choosing compile engine, there are two recipes:
+        \begin{itemize}
+            \item \XeLaTeX × 2
+            \item \XeLaTeX $\rightarrow$ \BibTeX $\rightarrow$ \XeLaTeX × 2
+        \end{itemize}
+        Without changing bib file, one could run \XeLaTeX twice to save time.
+    \subsubsection{示例 Example}
+        祥子的手哆嗦得更厉害了，揣起保单，拉起车，几乎要哭出来。
+        拉到个僻静地方，细细端详自己的车，\cite{laoshe}在漆板上试着照照自己的脸！
+        越看越可爱，就是那不尽合自己的理想的地方也都可以原谅了，因为已经是自己的车了。
+        把车看得似乎暂时可以休息会儿了，他坐在了水簸箕的新脚垫儿上，看着车把上的发亮的黄铜喇叭。
+        他忽然想起来，今年是二十二岁\cite{einstein}。因为父母死得早，他忘了生日是在哪一天。
+        自从到城里来，他没过一次生日。
+        好吧，今天买上了新车，就算是生日\cite{knuthwebsite}吧，人的也是车的，好记，而且车既是自己的心血，简直没什么不可以把人与车算在一块的地方。
+
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{simple_CHN_article_bib}
+
+\end{document}

@@ -81,6 +81,16 @@
             ]
         },
         {
+            "name": "XeLaTeX ➞ makeglossaries ➞ bibtex ➞ XeLaTeX × 2",
+            "tools": [
+                "xelatex",
+                "makeglossaries",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
             "name": "pdflatex ➞ makeglossaries ➞ bibtex ➞ pdflatex × 2",
             "tools": [
                 "pdflatex",
