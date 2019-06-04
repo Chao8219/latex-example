@@ -34,3 +34,7 @@ For this repo, I use TeXLive.
 - **VScode** with plugins
 
 For this repo, I use VS Code with **LaTex Workshop** plugin.
+
+## To Do
+
+- [ ] Add common math example.
