@@ -12,8 +12,32 @@ with latexmk recipe}
 \begin{document}
 \maketitle
 \begin{abstract}
-    To-do: my goal of this tex file.
+This file is to document the math expression I may need to use.
+Although there are plenty of cheatsheets about this online, I still 
+want to have a specific collection of \LaTeX expression for math and 
+equations.
+
+
+This tex file is built with recipe: latexmk.
 \end{abstract}
 \section{Curl Text}
-$\mathcal{A}$
+Sometimes you may want to use curl text to represent set or 
+other special variable. 
+Here is an example for that.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Normal Text & Math Text & Curl Text \\
+        \hline
+        LEGO & $LEGO$ & $\mathcal{LEGO}$ \\
+        \hline
+        ABCD & $ABCD$ & $\mathcal{ABCD}$ \\
+        \hline
+        XYZ & $XYZ$ & $\mathcal{XYZ}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+To write curl text, please use: \$\textbackslash mathcal\{A\}\$. 
 \end{document}
